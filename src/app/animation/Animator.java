@@ -60,12 +60,13 @@ public class Animator extends Canvas implements Runnable {
 		delay = 40l;
 		animateds = new Vector<Animated>();
 		thread = new Thread(this);
-		addMouseListener(new MouseAdapter() {
+		addMouseMotionListener(new MouseAdapter() {
 			@Override
 			public void mouseDragged(MouseEvent e) {
 				animatorMouseDragged(e);
 			}
-
+		});
+		addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
 				animatorMousePressed(e);
@@ -82,8 +83,8 @@ public class Animator extends Canvas implements Runnable {
 
 	public void animatorMousePressed(MouseEvent e) {
 		for (int i = 0; i < animateds.size(); i++) {
-			if (animateds.get(i).shape() != null && animateds.get(i).getAnimatedMouseListener() != null) {
-				if (animateds.get(i).shape().contains(e.getPoint())) {
+			if (animateds.get(i).getShape() != null && animateds.get(i).getAnimatedMouseListener() != null) {
+				if (animateds.get(i).getShape().contains(e.getPoint())) {
 					animateds.get(i).getAnimatedMouseListener().mousePressed(e);
 				}
 			}
@@ -92,10 +93,9 @@ public class Animator extends Canvas implements Runnable {
 
 	public void animatorMouseDragged(MouseEvent e) {
 		for (int i = 0; i < animateds.size(); i++) {
-			if (animateds.get(i).shape() != null && animateds.get(i).getAnimatedMouseListener() != null) {
-				if (animateds.get(i).shape().contains(e.getPoint())) {
+			if (animateds.get(i).getShape() != null && animateds.get(i).getAnimatedMouseListener() != null) {
+				if (animateds.get(i).getShape().contains(e.getPoint())) {
 					animateds.get(i).getAnimatedMouseListener().mouseDragged(e);
-					;
 				}
 			}
 		}
@@ -129,6 +129,7 @@ public class Animator extends Canvas implements Runnable {
 			if (!pause) {
 				animate();
 			}
+
 			try {
 				Thread.sleep(delay);
 			} catch (InterruptedException e) {
@@ -157,10 +158,17 @@ public class Animator extends Canvas implements Runnable {
 	}
 
 	public void clear() {
-
+		image.getGraphics().clearRect(0, 0, getWidth(), getHeight());
+		getGraphics().drawImage(image, 0, 0, this);
 	}
 
 	public void restart() {
+		initAnimateds();
+	}
 
+	public void initAnimateds() {
+		for (int i = 0; i < animateds.size(); i++) {
+			animateds.get(i).init();
+		}
 	}
 }

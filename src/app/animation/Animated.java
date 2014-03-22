@@ -46,7 +46,7 @@ public abstract class Animated {
 
 	public abstract void init();
 
-	public abstract Rectangle2D shape();
+	public abstract Rectangle2D getShape();
 
 	public abstract void paint(Graphics g);
 
