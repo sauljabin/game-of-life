@@ -15,3 +15,9 @@ GUI_RESTART=Reiniciar
 GUI_CLOSE=Close
 GUI_DELAY=Delay
 GUI_RESUME=Reanudar
+
+INFO_STARTED=Simulación iniciada
+INFO_RESTARTED=Simulación reiniciada
+INFO_PAUSED=Simulación pausada
+INFO_RESUME=Simulación reanudada
+INFO_CLEARED=Celdas despejadas

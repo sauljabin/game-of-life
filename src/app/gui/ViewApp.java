@@ -68,9 +68,7 @@ public class ViewApp extends JFrame {
 	private JButton btnRestart;
 	private JButton btnClose;
 	private JSpinner spinDelay;
-
 	private Animator animator;
-
 	private JButton btnResume;
 
 	public ViewApp() {
@@ -78,6 +76,7 @@ public class ViewApp extends JFrame {
 		buttons = new Vector<JButton>();
 		sppiners = new Vector<JSpinner>();
 		setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+		setResizable(false);
 		init();
 		setLocationRelativeTo(this);
 		setVisible(true);
@@ -122,7 +121,7 @@ public class ViewApp extends JFrame {
 
 		pnlLateral = new JPanel();
 		pnlLateral.setLayout(new MigLayout());
-		add(pnlLateral, BorderLayout.EAST);
+		add(pnlLateral, BorderLayout.WEST);
 
 		lblFps = new JLabel(Translate.get("GUI_DELAY"));
 		pnlLateral.add(lblFps, "width 50%");
@@ -131,20 +130,20 @@ public class ViewApp extends JFrame {
 		pnlLateral.add(spinDelay, "width  50%, wrap");
 
 		btnStart = new JButton(Translate.get("GUI_START"));
-		pnlLateral.add(btnStart, "grow, height 25, span 2, wrap");
-
-		btnNext = new JButton(Translate.get("GUI_NEXT"));
-		pnlLateral.add(btnNext, "grow, height 25, span 2, wrap");
-
-		btnClear = new JButton(Translate.get("GUI_CLEAR"));
-		pnlLateral.add(btnClear, "grow, height 25, span 2, wrap");
+		pnlLateral.add(btnStart, "grow, height 25, span 2, wrap 20");		
 
 		btnPause = new JButton(Translate.get("GUI_PAUSE"));
-		pnlLateral.add(btnPause, "grow, height 25, span 2, wrap 20");
+		pnlLateral.add(btnPause, "grow, height 25, span 2, wrap");
+		
+		btnNext = new JButton(Translate.get("GUI_NEXT"));
+		pnlLateral.add(btnNext, "grow, height 25, span 2, wrap");
 
 		btnResume = new JButton(Translate.get("GUI_RESUME"));
 		pnlLateral.add(btnResume, "grow, height 25, span 2, wrap 20");
 
+		btnClear = new JButton(Translate.get("GUI_CLEAR"));
+		pnlLateral.add(btnClear, "grow, height 25, span 2, wrap");
+		
 		btnRestart = new JButton(Translate.get("GUI_RESTART"));
 		pnlLateral.add(btnRestart, "grow, height 25, span 2, wrap");
 
@@ -175,6 +174,7 @@ public class ViewApp extends JFrame {
 		buttons.add(btnPause);
 		buttons.add(btnRestart);
 		buttons.add(btnStart);
+		buttons.add(btnResume);
 		sppiners.add(spinDelay);
 	}
 
