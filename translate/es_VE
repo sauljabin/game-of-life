@@ -1,0 +1,17 @@
+GUI_APPDESCRIP=Autómata celular: Juega de la Vida de Conway
+GUI_NAME=Nombre
+GUI_VALUE=Valor
+GUI_OPTIONS=Opciones
+GUI_SHOWCONFIG=Ver Configuración
+GUI_CLOSE=Cerrar
+GUI_HELP=Ayuda
+GUI_ABOUT=Sobre
+GUI_ERROR=Error
+GUI_START=Iniciar
+GUI_NEXT=Siguiente
+GUI_CLEAR=Limpiar
+GUI_PAUSE=Pausa
+GUI_RESTART=Reiniciar
+GUI_CLOSE=Close
+GUI_DELAY=Delay
+GUI_RESUME=Reanudar
