@@ -20,18 +20,16 @@
 
 package app.animation;
 
-import java.awt.event.MouseEvent;
-
-public class CellMouseListener extends AnimatedMouseListener {
+public class CellMouseListener implements AnimatedMouseListener {
 
 	@Override
-	public void mousePressed(MouseEvent e) {
-		((Cell) animated).setNextState(Cell.STATE_ON);
+	public void animatedMousePressed(Animated source) {
+		((Cell) source).setNextState(Cell.STATE_ON);
 	}
 
 	@Override
-	public void mouseDragged(MouseEvent e) {
-		mousePressed(e);
+	public void animatedMouseDragged(Animated source) {
+		animatedMousePressed(source);
 	}
 
 }

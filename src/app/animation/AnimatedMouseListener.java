@@ -20,23 +20,9 @@
 
 package app.animation;
 
-import java.awt.event.MouseEvent;
+public interface AnimatedMouseListener {
 
-public class AnimatedMouseListener {
+	public void animatedMousePressed(Animated source);
 
-	protected Animated animated;
-
-	public Animated getAnimated() {
-		return animated;
-	}
-
-	public void setAnimated(Animated animated) {
-		this.animated = animated;
-	}
-
-	public void mousePressed(MouseEvent e) {
-	}
-
-	public void mouseDragged(MouseEvent e) {
-	}
+	public void animatedMouseDragged(Animated source);
 }

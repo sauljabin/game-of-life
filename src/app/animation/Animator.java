@@ -85,7 +85,7 @@ public class Animator extends Canvas implements Runnable {
 		for (int i = 0; i < animateds.size(); i++) {
 			if (animateds.get(i).getShape() != null && animateds.get(i).getAnimatedMouseListener() != null) {
 				if (animateds.get(i).getShape().contains(e.getPoint())) {
-					animateds.get(i).getAnimatedMouseListener().mousePressed(e);
+					animateds.get(i).getAnimatedMouseListener().animatedMousePressed(animateds.get(i));
 				}
 			}
 		}
@@ -95,7 +95,7 @@ public class Animator extends Canvas implements Runnable {
 		for (int i = 0; i < animateds.size(); i++) {
 			if (animateds.get(i).getShape() != null && animateds.get(i).getAnimatedMouseListener() != null) {
 				if (animateds.get(i).getShape().contains(e.getPoint())) {
-					animateds.get(i).getAnimatedMouseListener().mouseDragged(e);
+					animateds.get(i).getAnimatedMouseListener().animatedMouseDragged(animateds.get(i));
 				}
 			}
 		}
