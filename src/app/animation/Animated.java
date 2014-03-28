@@ -40,7 +40,6 @@ public abstract class Animated {
 	}
 
 	public void setAnimatedMouseListener(AnimatedMouseListener animatedMouseListener) {
-		animatedMouseListener.setAnimated(this);
 		this.animatedMouseListener = animatedMouseListener;
 	}
 
