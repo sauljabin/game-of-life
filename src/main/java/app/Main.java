@@ -27,11 +27,7 @@ public class Main {
 
     public static void main(String[] args) {
         loadFeatures();
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                new ControllerViewApp();
-            }
-        });
+        SwingUtilities.invokeLater(() -> new ControllerViewApp());
     }
 
 }
