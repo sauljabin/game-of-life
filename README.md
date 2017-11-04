@@ -11,10 +11,16 @@ https://es.wikipedia.org/wiki/Juego_de_la_vida
 - Repository: https://github.com/sauljabin/game-of-life
 - License: MIT
 - Language: Java
-- IDE: Eclipse
 
+Comandos
+--------
+
+```
+make run
+
+make clean
+```
 
 Screenshots
 ------------
-![](/documents/screenshot-1.png)
-![](/documents/screenshot-2.png)
+![](documents/screenshot.png)
