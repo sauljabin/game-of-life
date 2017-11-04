@@ -19,8 +19,6 @@ import java.util.Vector;
 
 public class ViewConfig extends JDialog {
 
-    private static final long serialVersionUID = 6795269672488995634L;
-
     public ViewConfig() {
         setSize(500, 300);
         setTitle(Config.get("APP_NAME"));
@@ -36,7 +34,6 @@ public class ViewConfig extends JDialog {
 
     public class ConfigModelTable extends AbstractTableModel {
 
-        private static final long serialVersionUID = -8276891304790814037L;
         private Vector<String> titles;
         private Vector<String> keys;
         private JTable table;

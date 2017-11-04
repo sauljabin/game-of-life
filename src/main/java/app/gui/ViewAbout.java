@@ -17,8 +17,6 @@ import javax.swing.*;
 
 public class ViewAbout extends JDialog {
 
-    private static final long serialVersionUID = -3296703600845483586L;
-
     public ViewAbout() {
         setSize(400, 170);
         setTitle(Config.get("APP_NAME"));

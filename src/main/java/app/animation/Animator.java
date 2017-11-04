@@ -16,7 +16,6 @@ import java.util.Vector;
 
 public class Animator extends Canvas implements Runnable {
 
-    private static final long serialVersionUID = 1L;
     private Vector<Animated> animateds;
     private long delay;
     private boolean pause;

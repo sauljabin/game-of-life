@@ -21,8 +21,6 @@ import java.util.Vector;
 
 public class ViewApp extends JFrame {
 
-    private static final long serialVersionUID = 8177734926614753978L;
-
     private ControllerViewApp controller;
     private Vector<JMenuItem> menuItems;
     private Vector<JButton> buttons;
