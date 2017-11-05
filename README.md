@@ -23,4 +23,6 @@ make clean
 
 Screenshots
 ------------
-![](documents/screenshot.png)
+![](documents/screenshots/screenshot-1.png)
+
+![](documents/screenshots/screenshot-2.png)
